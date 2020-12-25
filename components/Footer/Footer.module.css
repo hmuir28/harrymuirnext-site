@@ -1,0 +1,18 @@
+.footerContainer {
+  color: rgb(235, 240, 241);
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .footerContainer {
+    margin-top: 10%;
+    padding: 20px 0;
+    position: relative !important;
+    text-align: center;
+    width: 100%;
+  }
+}

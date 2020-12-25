@@ -1,0 +1,86 @@
+@value (hmBlack, hmWhite) from '../../styles/shared/colors.css';
+
+.headerContainer nav {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  width: 100%;
+}
+
+.headerContainer .rightSide {
+  margin-left: auto;
+}
+
+.headerContainer h1 {
+  font-size: 1rem;
+}
+
+.headerContainer ul {
+  list-style: none;
+}
+
+.headerContainer ul li {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.headerContainer .navbarLink {
+  color: hmWhite !important;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.headerContainer .navbarToggle {
+  background-color: hmWhite;
+  width: auto !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerContainer {
+    width: 80vw;
+    top: 2rem;
+  }
+
+  .headerContainer nav {
+    background-color: hmBlack;
+    z-index: 1;
+  }
+
+  .headerContainer nav div:first-of-type {
+    background-color: hmBlack;
+  }
+
+  .headerContainer h1 {
+    font-size: 1rem;
+  }
+
+  .headerContainer ul li {
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width:800px) {
+  .headerContainer {
+    width: 80vw;
+    top: 2rem;
+  }
+
+  .headerContainer nav {
+    background-color: hmBlack;
+    z-index: 1;
+  }
+
+  .headerContainer nav div:first-of-type {
+    background-color: hmBlack;
+  }
+
+  .headerContainer h1 {
+    font-size: 1rem;
+  }
+
+  .headerContainer ul li {
+    padding-right: 1rem;
+  }
+}
