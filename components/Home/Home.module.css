@@ -1,102 +1,120 @@
 @value (hmWhite) from '../../styles/shared/colors.css';
 
-.App {
-  padding-right: 10%;
-  padding-left: 10%;
-}
-
-.homeContainer {
-  min-height: 100vh;
-}
-
-.homeContainer .homeHeadWrapper {
-  top:2rem;
-  display: flex;
-  flex-direction: column;
-  margin-top: 5em;
-  width: 40vw;
-}
-
-.homeContainer .content {
+.content {
+  composes: row spaceBetween from '../../styles/shared/layout.css';
   padding-top: 15%;
 }
 
-.homeContainer .homeHeadWrapper h1 {
-  color: hmWhite;
-  font-size: 4.5rem;
-  font-family: "Montserrat";
-}
-
-.homeContainer .homeHeadWrapper h1 span {
-  color:#1E6FD9;
-}
-
-.homeContainer .homeHeadWrapper p {
-  color: hmWhite;
-  position: relative;
-  font-size: 2rem;
-}
-
-.homeContainer .imageContainer img {
+.imageContainer img {
   height: 100%;
+  margin-top: 18px;
   position: relative;
-  top: 5rem;
   width: 100%;
 }
 
+.imgCol,
+.textCol {
+  composes: col from '../../styles/shared/layout.css';
+}
+
+.imgCol {
+  flex: 0 0 33.333333%;
+  height: 100%;
+  max-width: 33.333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.textContainer h1 {
+  color: hmWhite;
+  font-size: 4.5rem;
+  font-family: "Montserrat";
+  line-height: 1.2;
+  margin: 0 0 7px 0;
+}
+
+.textContainer h1 span {
+  color: #1E6FD9;
+}
+
+.textContainer p {
+  color: hmWhite;
+  font-size: 2rem;
+  margin-top: 0;
+  position: relative;
+}
+
 @media only screen and (max-width: 600px) {
-  .homeContainer .homeHeadWrapper {
+  .imgCol {
+    flex: auto;
+    max-width: none;
+  }
+
+  .imageContainer img {
+    top: 2rem;
+  }
+
+  .textContainer {
     margin-top: 4em;
     width: 100%;
   }
   
-  .homeContainer .homeHeadWrapper h1 {
+  .textContainer h1 {
     font-size: 1.2rem;
     text-align: center;
   }
   
   
-  .homeContainer .homeHeadWrapper p {
+  .textContainer p {
     font-size: 1rem;
     text-align: center;
-  }
-  
-  .homeContainer .imageContainer img {
-    top: 2rem;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width:800px) {
-  .homeContainer .content {
+  .content {
     align-items: center;
     display: flex;
     flex-direction: column-reverse;
     padding-top: 15%;
   }
 
-  .homeContainer .content .textCol {
-    max-width: 100%;
-  }
-
-  .homeContainer .content .imgCol {
+  .content .imgCol {
     display: flex;
     flex: auto;
     justify-content: center;
     max-width: 100%;
   }
 
-  .homeContainer .homeHeadWrapper {
+  .content .textCol {
+    max-width: 100%;
+  }
+
+  .imageContainer {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .imageContainer img {
+    height: 20rem;
+    top: 2rem;
+    width: 20rem;
+  }
+
+  .textContainer {
     margin-top: 4em;
     width: 100%;
   }
 
-  .homeContainer .homeHeadWrapper h1 {
+  .textContainer h1 {
     font-size: 2rem;
-  }
-
-  .homeContainer .imageContainer img {
-    height: 20rem;
-    top: 2rem;
-    width: 20rem;
   }
 }

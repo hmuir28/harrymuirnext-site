@@ -1,11 +1,11 @@
 @value (hmBlack, hmWhite) from '../../styles/shared/colors.css';
 
+.brandTitle {
+  margin: .5rem;
+  padding-left: 2rem;
+}
+
 .headerContainer nav {
-  display: flex;
-  flex-flow: row wrap;
-  height: 50px;
-  position: fixed;
-  right: 0;
   width: 100%;
 }
 
@@ -37,9 +37,75 @@
   width: auto !important;
 }
 
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menuContainer a {
+  color: white;
+  display: block;
+  padding: 15px 5px;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hmBlack;
+  color: hmWhite;
+}
+
+.navbarLinks {
+  height: 100%;
+}
+
+.navbarLinks ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarLinks li {
+  list-style: none;
+}
+
+.navbarLinks li a {
+  color: hmWhite;
+  display: block;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+
+.toggleButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+  position: absolute;
+  right: 1rem;
+  top: .75rem;
+  width: 30px;
+}
+
+.toggleButton .bar {
+  background-color: hmWhite;
+  border-radius: 10px;
+  height: 3px;
+  width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
+  .brandTitle {
+    padding-left: 0;
+  }
+
   .headerContainer {
-    width: 80vw;
     top: 2rem;
   }
 
@@ -58,12 +124,50 @@
 
   .headerContainer ul li {
     padding-right: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbarLinks {
+    display: none;
+    width: 100%;
+  }
+
+  .navbarLinks ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbarLinks ul li {
+    text-align: left;
+  }
+
+  .navbarLinks ul li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbarLinks.active {
+    display: flex;
+  }
+
+  .showNavbarLinks {
+    display: inline-block;
+  }
+
+  .toggleButton {
+    display: flex;
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width:800px) {
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .brandTitle {
+    padding-left: 0;
+  }
+
   .headerContainer {
-    width: 80vw;
     top: 2rem;
   }
 
@@ -82,5 +186,40 @@
 
   .headerContainer ul li {
     padding-right: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbarLinks {
+    display: none;
+    width: 100%;
+  }
+
+  .navbarLinks ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbarLinks ul li {
+    text-align: left;
+  }
+
+  .navbarLinks ul li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbarLinks.active {
+    display: flex;
+  }
+
+  .showNavbarLinks {
+    display: inline-block;
+  }
+
+  .toggleButton {
+    display: flex;
   }
 }

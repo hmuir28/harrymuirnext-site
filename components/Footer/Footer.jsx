@@ -7,12 +7,10 @@ const Footer = ({ position = null }) => (
     className={styles.footerContainer}
     style={{ position }}
   >
-    <div className="max-w-md">
-      <div md={8} className={['mx-auto', 'text-center']}>
-        <span>
-          ©2020 Made by <b>Harry Muir.</b>
-        </span>
-      </div>
+    <div md={8} className={['mx-auto', 'text-center']}>
+      <span>
+        ©2020 Made by <b>Harry Muir.</b>
+      </span>
     </div>
   </footer>
 );

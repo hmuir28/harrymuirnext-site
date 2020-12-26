@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
+import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
 import Footer from '../components/Footer/Footer';
 import client from '../config/contentful.config';
@@ -17,8 +18,8 @@ const HomePage = ({ portfolio }) => {
     <>
       <Head title={authorName} description={authorDescription} />
       <div className="app-container">
-        {/* <Header name={authorName} contactEmail="harry182894@gmail.com" /> */}
-        <div className="content-container container mx-auto">
+        <Header name={authorName} contactEmail={process.env.CONTACT_EMAIL} />
+        <div className="content-container">
           <Home
             imageProfile={imageProfile.file.url}
             name={authorName}
@@ -41,7 +42,5 @@ HomePage.getInitialProps = async () => {
     portfolio: landing.items[0],
   };
 };
-
-console.log(HomePage);
 
 export default HomePage;

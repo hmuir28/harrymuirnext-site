@@ -1,46 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Navbar, Nav } from 'react-bootstrap';
-
 import styles from './Header.module.css';
 
-const Header = ({ contactEmail }) => {
+const Header = () => {
+  const [isToggleClicked, setIsToggleClicked] = useState(false);
+  const handleMobileToggleClick = () => setIsToggleClicked(!isToggleClicked);
+
   return (
     <header className={styles.headerContainer}>
-      <Navbar expand="lg">
-        <Navbar.Brand>
+      <nav className={styles.navbar}>
+        <div className={styles.brandTitle}>
           <Link
             className={styles.navbarLink}
-            to="/"
+            href="/"
           >
             Harry Muir
           </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className={styles.navbarToggle}
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={styles.rightSide}>
-            <Nav>
-              <Link 
-                className={`${styles.navbarLink} nav-link`}
-                to="about"
+        </div>
+        <a onClick={handleMobileToggleClick} className={styles.toggleButton}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </a>
+        <div className={`${styles.navbarLinks} ${isToggleClicked ? styles.showNavbarLinks : ''}`}>
+          <ul>
+            <li>
+              <Link
+                className={styles.navbarLink}
+                href="/resume"
               >
                 Resume
               </Link>
-            </Nav>
-            <Nav.Link
-              className={styles.navbarLink}
-              href={`mailto:${contactEmail}`}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Contact
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+            </li>
+            <li>
+              <a
+                className={styles.navbarLink}
+                href={`mailto:${process.env.CONTACT_EMAIL}`}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
   );
 };
