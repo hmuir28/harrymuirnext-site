@@ -1,0 +1,109 @@
+@value (hmWhite) from '../../styles/shared/colors.css';
+
+.experienceContainer {
+  composes: resumeContainer from '../../styles/shared/layout.css';
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.experienceContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80vw;
+}
+
+.experienceContent h1 {
+  font-size: 5rem;
+  font-family: 'Montserrat';
+}
+
+.experienceList {
+  composes: cardContainer from '../../styles/shared/layout.css';
+}
+
+.experienceList h4 {
+  color: hmWhite;
+}
+
+.experienceList img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.header1 {
+  composes: header1 from '../../styles/shared/layout.css';
+}
+
+.itemLabel {
+  composes: itemLabel from '../../styles/shared/layout.css';
+}
+
+.itemValue {
+  composes: itemValue from '../../styles/shared/layout.css';
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1rem;
+}
+
+.projectsContainer img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.projectsContainer .title {
+  font-size: 1.2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .experienceContent {
+    top: 10rem;
+    width: 80vw;
+  }
+  
+  .experienceContent h1 {
+    font-size: 2rem;
+  }
+  
+  .experienceContent .projectsContainer {
+    grid-gap: 0.2rem;
+  }
+  
+  .experienceContent .projectsContainer img {
+    height: 8rem;
+    width: 8rem;
+  }
+  
+  .experienceContent .projectsContainer .title {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width:800px) {
+  .experienceContent {
+    top: 10rem;
+    width: 80vw;
+  }
+
+  .experienceContent h1 {
+    font-size: 2rem;
+  }
+
+  .experienceContent .projectsContainer {
+    grid-gap: 0.2rem;
+  }
+
+  .experienceContent .projectsContainer img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .experienceContent .projectsContainer .title {
+    font-size: 0.8rem;
+  }
+}
