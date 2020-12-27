@@ -1,7 +1,41 @@
+@value (hmBlackDark0, hmWhite, hmWhiteDark0) from './colors.css';
+
+.cardContainer {
+  flex: 1 1 auto;
+  margin: 1em;
+  padding: 1em;
+}
+
 .col {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.header1 {
+  color: hmWhite;
+  font-size: 5rem;
+  font-family: 'Montserrat';
+}
+
+.itemLabel {
+  color: hmWhite;
+}
+
+.itemValue {
+  color: hmWhiteDark0;
+}
+
+.parragraph {
+  color: hmWhite;
+  position: relative;
+  font-size: 1.6rem;
+  width: 60vw;
+  opacity: 0.9;
+}
+
+.resumeContainer {
+  margin-top: 10rem;
 }
 
 .row {
