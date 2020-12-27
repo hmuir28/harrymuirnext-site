@@ -1,0 +1,19 @@
+@value (hmWhite) from '../../styles/shared/colors.css';
+
+.aboutMeContainer {
+  margin-top: 10rem;
+}
+
+.aboutMeContainer h1 {
+  color: hmWhite;
+  font-size: 5rem;
+  font-family: 'Montserrat';
+}
+
+.aboutMeContainer p {
+  color: hmWhite;
+  font-size: 1.6rem;
+  opacity: 0.9;
+  position: relative;
+  width: 60vw;
+}
