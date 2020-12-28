@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './AboutMe.module.css';
 
 const AboutMe = ({ aboutMeTitle, aboutMeDescription }) => (
