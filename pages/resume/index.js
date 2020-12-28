@@ -4,10 +4,12 @@ import Head from 'next/head';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import AcademicPrep from '../../components/AcademicPrep/AcademicPrep';
 import Certificates from '../../components/Certificates/Certificates';
-import Experience from '../../components/Experience/Experience';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import client from '../../config/contentful.config';
+import Experience from '../../components/Experience/Experience';
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
+import Skills from '../../components/Skills/Skills';
+
 
 const ResumePage = ({ portfolio }) => {
   const {
@@ -21,6 +23,8 @@ const ResumePage = ({ portfolio }) => {
     experienceTitle,
     otherStudiesTitle,
     otherStudiesCertificates,
+    skillsProgrammingLang,
+    skillsTitle,
   } = portfolio.fields;
 
   console.log(portfolio.fields);
@@ -46,6 +50,10 @@ const ResumePage = ({ portfolio }) => {
           <Certificates
             otherStudiesTitle={otherStudiesTitle}
             otherStudiesCertificates={otherStudiesCertificates}
+          />
+          <Skills
+            skillsProgrammingLang={skillsProgrammingLang}
+            skillsTitle={skillsTitle}
           />
         </div>
       </div>

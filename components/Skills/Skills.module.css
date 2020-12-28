@@ -1,0 +1,17 @@
+@value (hmWhite) from '../../styles/shared/colors.css';
+
+.header1 {
+  composes: header1 from '../../styles/shared/layout.css';
+}
+
+.skillsContainer {
+  composes: resumeContainer from '../../styles/shared/layout.css';
+}
+
+.skillsList {
+  composes: cardContainer from '../../styles/shared/layout.css';
+}
+
+.skillsList h4 {
+  color: hmWhite;
+}
