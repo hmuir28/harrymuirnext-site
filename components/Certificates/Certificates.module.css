@@ -1,0 +1,44 @@
+@value (hmBlackDark0, hmWhite) from '../../styles/shared/colors.css';
+
+.certificatesContainer {
+  composes: resumeContainer from '../../styles/shared/layout.css';
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.certificatesContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.certificatesContent h4 {
+  color: hmWhite;
+  font-size: 1.5rem;
+}
+
+.certificatesList {
+  composes: cardContainer from '../../styles/shared/layout.css';
+  border: 4px solid hmBlackDark0;
+  width: 30em;
+}
+
+.certificatesList a {
+  color: hmWhite;
+}
+
+.certificatesList a:hover {
+  text-decoration: underline;
+}
+
+.header1 {
+  composes: header1 from '../../styles/shared/layout.css';
+}
+
+.itemLabel {
+  composes: itemLabel from '../../styles/shared/layout.css';
+}
+
+.itemValue {
+  composes: itemValue from '../../styles/shared/layout.css';
+}

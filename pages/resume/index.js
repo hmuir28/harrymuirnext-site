@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import AboutMe from '../../components/AboutMe/AboutMe';
 import AcademicPrep from '../../components/AcademicPrep/AcademicPrep';
+import Certificates from '../../components/Certificates/Certificates';
 import Experience from '../../components/Experience/Experience';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -18,6 +19,8 @@ const ResumePage = ({ portfolio }) => {
     authorDescription,
     experienceHistorial,
     experienceTitle,
+    otherStudiesTitle,
+    otherStudiesCertificates,
   } = portfolio.fields;
 
   console.log(portfolio.fields);
@@ -39,6 +42,10 @@ const ResumePage = ({ portfolio }) => {
           <AcademicPrep
             academicPrepTitle={academicPrepTitle}
             academicPrepDegrees={academicPrepDegrees}
+          />
+          <Certificates
+            otherStudiesTitle={otherStudiesTitle}
+            otherStudiesCertificates={otherStudiesCertificates}
           />
         </div>
       </div>
