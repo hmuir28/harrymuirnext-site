@@ -4,11 +4,11 @@ import styles from './AcademicPrep.module.css';
 
 const AcademicPrep = ({ academicPrepTitle, academicPrepDegrees }) => (
   <section className={styles.academicPrepContainer}>
-    <h1>{academicPrepTitle}</h1>
+    <h1 className={styles.header1}>{academicPrepTitle}</h1>
     <div className={styles.academicPrepContent}>
       {academicPrepDegrees.map(({ logo, university, career, date }, index) => (
         <div
-          className={styles.cardContainer}
+          className={styles.academicPrepList}
           key={index}
         >
           

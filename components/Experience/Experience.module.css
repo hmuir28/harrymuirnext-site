@@ -26,12 +26,6 @@
   color: hmWhite;
 }
 
-.experienceList img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-}
-
 .header1 {
   composes: header1 from '../../styles/shared/layout.css';
 }

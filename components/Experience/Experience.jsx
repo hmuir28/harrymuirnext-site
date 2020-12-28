@@ -4,7 +4,7 @@ import styles from './Experience.module.css';
 const Experience = ({ experienceTitle, experienceHistorial }) => {
   return (
     <section className={styles.experienceContainer}>
-      <h1  className={styles.header1}>{experienceTitle}</h1>
+      <h1 className={styles.header1}>{experienceTitle}</h1>
       <div className={styles.experienceContent}>
         {experienceHistorial.map(({
           company,

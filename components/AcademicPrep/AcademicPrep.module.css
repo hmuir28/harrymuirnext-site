@@ -1,0 +1,42 @@
+@value (hmWhite) from '../../styles/shared/colors.css';
+
+.academicPrepContainer {
+  composes: resumeContainer from '../../styles/shared/layout.css';
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.academicPrepContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.academicPrepContent h4 {
+  color: hmWhite;
+  font-size: 1.5rem;
+}
+
+.academicPrepList {
+  composes: cardContainer from '../../styles/shared/layout.css';
+}
+
+.academicPrepList img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.header1 {
+  composes: header1 from '../../styles/shared/layout.css';
+}
+
+.itemLabel {
+  composes: itemLabel from '../../styles/shared/layout.css';
+}
+
+.itemValue {
+  composes: itemValue from '../../styles/shared/layout.css';
+}
