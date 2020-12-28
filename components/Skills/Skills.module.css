@@ -5,7 +5,7 @@
 }
 
 .skillsContainer {
-  composes: resumeContainer from '../../styles/shared/layout.css';
+  composes: layoutContainer from '../../styles/shared/layout.css';
 }
 
 .skillsList {

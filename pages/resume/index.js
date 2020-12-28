@@ -29,8 +29,6 @@ const ResumePage = ({ portfolio }) => {
     skillsTitle,
   } = portfolio.fields;
 
-  console.log(portfolio.fields);
-
   return (
     <>
       <Head title={authorName} description={authorDescription} />

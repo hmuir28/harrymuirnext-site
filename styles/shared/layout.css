@@ -26,16 +26,16 @@
   color: hmWhiteDark0;
 }
 
+.layoutContainer {
+  margin-top: 10rem;
+}
+
 .parragraph {
   color: hmWhite;
   position: relative;
   font-size: 1.6rem;
   width: 60vw;
   opacity: 0.9;
-}
-
-.resumeContainer {
-  margin-top: 10rem;
 }
 
 .row {
@@ -46,4 +46,46 @@
 
 .spaceBetween {
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    width: auto !important;
+  }
+
+  .header1 {
+    font-size: 2.5rem;
+  }
+
+  .layoutContainer {
+    display: grid;
+    margin-top: 5rem;
+    width: auto;
+  }
+
+  .parragraph {
+    font-size: 1rem;
+    width: auto !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width:800px) {
+  .cardContainer {
+    width: auto !important;
+  }
+
+  .header1 {
+    font-size: 2.5rem;
+  }
+
+  .layoutContainer {
+    display: grid;
+    margin-top: 5rem;
+    width: auto;
+  }
+
+  .parragraph {
+    font-size: 1.5rem;
+    width: auto !important;
+  }
 }

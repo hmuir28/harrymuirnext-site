@@ -19,7 +19,7 @@ const Contact = ({ socialMedia }) => {
       >
         {Constants.contactEmail}
       </a>
-      <div>
+      <div className={styles.socialMediaContainer}>
         <ul>
           <li>
             <a

@@ -1,7 +1,7 @@
 @value (hmWhite) from '../../styles/shared/colors.css';
 
 .experienceContainer {
-  composes: resumeContainer from '../../styles/shared/layout.css';
+  composes: layoutContainer from '../../styles/shared/layout.css';
   padding-left: 0;
   padding-right: 0;
 }
@@ -11,11 +11,6 @@
   flex-direction: column;
   position: relative;
   width: 80vw;
-}
-
-.experienceContent h1 {
-  font-size: 5rem;
-  font-family: 'Montserrat';
 }
 
 .experienceList {
@@ -38,6 +33,16 @@
   composes: itemValue from '../../styles/shared/layout.css';
 }
 
+ul.itemValue {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -56,48 +61,28 @@
 
 @media only screen and (max-width: 600px) {
   .experienceContent {
-    top: 10rem;
-    width: 80vw;
+    top: auto;
+    width: auto;
   }
-  
-  .experienceContent h1 {
-    font-size: 2rem;
-  }
-  
-  .experienceContent .projectsContainer {
-    grid-gap: 0.2rem;
-  }
-  
-  .experienceContent .projectsContainer img {
-    height: 8rem;
-    width: 8rem;
-  }
-  
-  .experienceContent .projectsContainer .title {
-    font-size: 0.8rem;
+
+  .experienceList {
+    margin: 15px 0;
+    padding: 0;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width:800px) {
   .experienceContent {
-    top: 10rem;
-    width: 80vw;
+    top: auto;
+    width: auto;
   }
 
-  .experienceContent h1 {
-    font-size: 2rem;
+  .experienceList {
+    margin: 15px 0;
+    padding: 0;
   }
 
-  .experienceContent .projectsContainer {
-    grid-gap: 0.2rem;
-  }
-
-  .experienceContent .projectsContainer img {
-    height: 8rem;
-    width: 8rem;
-  }
-
-  .experienceContent .projectsContainer .title {
-    font-size: 0.8rem;
+  .experienceList span {
+    font-size: 1.5rem;
   }
 }

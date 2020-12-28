@@ -1,7 +1,7 @@
 @value (hmBlackDark0, hmWhite) from '../../styles/shared/colors.css';
 
 .certificatesContainer {
-  composes: resumeContainer from '../../styles/shared/layout.css';
+  composes: layoutContainer from '../../styles/shared/layout.css';
   padding-left: 0;
   padding-right: 0;
 }

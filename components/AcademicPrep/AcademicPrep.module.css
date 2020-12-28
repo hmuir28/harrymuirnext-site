@@ -1,7 +1,7 @@
 @value (hmWhite) from '../../styles/shared/colors.css';
 
 .academicPrepContainer {
-  composes: resumeContainer from '../../styles/shared/layout.css';
+  composes: layoutContainer from '../../styles/shared/layout.css';
   padding-left: 0;
   padding-right: 0;
 }
@@ -40,3 +40,32 @@
 .itemValue {
   composes: itemValue from '../../styles/shared/layout.css';
 }
+
+@media only screen and (max-width: 600px) {
+  .academicPrepContent {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .academicPrepList {
+    margin: 15px 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width:800px) {
+  .academicPrepContent {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .academicPrepList {
+    margin: 15px 0;
+    padding: 0;
+  }
+
+  .academicPrepList span {
+    font-size: 1.5rem;
+  }
+}
+
