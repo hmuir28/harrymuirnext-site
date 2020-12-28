@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Constants from '../../util/Constants';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -35,7 +36,7 @@ const Header = () => {
             <li>
               <a
                 className={styles.navbarLink}
-                href={`mailto:${process.env.CONTACT_EMAIL}`}
+                href={`mailto:${Constants.contactEmail}`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
